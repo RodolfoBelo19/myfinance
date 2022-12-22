@@ -7,10 +7,10 @@ function App() {
 
   return (
     <>
-      <div className="hidden md:block">
+      <div className="hidden sm:block">
         <Header />
       </div>
-      <div className="block md:hidden">
+      <div className="block sm:hidden">
         <BottomNavigation />
       </div>
     </>
