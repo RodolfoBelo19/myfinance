@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/myfinance/static/css/main.073c9b0a.css",
+    "main.js": "/myfinance/static/js/main.ca96871b.js",
+    "static/js/787.5468d81e.chunk.js": "/myfinance/static/js/787.5468d81e.chunk.js",
+    "static/media/logo.svg": "/myfinance/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/myfinance/index.html",
+    "main.073c9b0a.css.map": "/myfinance/static/css/main.073c9b0a.css.map",
+    "main.ca96871b.js.map": "/myfinance/static/js/main.ca96871b.js.map",
+    "787.5468d81e.chunk.js.map": "/myfinance/static/js/787.5468d81e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.ca96871b.js"
+  ]
+}
