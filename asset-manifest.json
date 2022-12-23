@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/myfinance/static/css/main.39aac3ad.css",
-    "main.js": "/myfinance/static/js/main.c4ecf43b.js",
+    "main.css": "/myfinance/static/css/main.57e1cb68.css",
+    "main.js": "/myfinance/static/js/main.34100a82.js",
     "static/js/787.5468d81e.chunk.js": "/myfinance/static/js/787.5468d81e.chunk.js",
     "static/media/account.png": "/myfinance/static/media/account.07f719379cf418635e8a.png",
     "static/media/inbox.png": "/myfinance/static/media/inbox.605ae15e846d023e95fa.png",
@@ -13,12 +13,12 @@
     "static/media/analytics.png": "/myfinance/static/media/analytics.67c41f0a28c3e2ea9119.png",
     "static/media/logo.png": "/myfinance/static/media/logo.05f07ef28223d58804fb.png",
     "index.html": "/myfinance/index.html",
-    "main.39aac3ad.css.map": "/myfinance/static/css/main.39aac3ad.css.map",
-    "main.c4ecf43b.js.map": "/myfinance/static/js/main.c4ecf43b.js.map",
+    "main.57e1cb68.css.map": "/myfinance/static/css/main.57e1cb68.css.map",
+    "main.34100a82.js.map": "/myfinance/static/js/main.34100a82.js.map",
     "787.5468d81e.chunk.js.map": "/myfinance/static/js/787.5468d81e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39aac3ad.css",
-    "static/js/main.c4ecf43b.js"
+    "static/css/main.57e1cb68.css",
+    "static/js/main.34100a82.js"
   ]
 }
