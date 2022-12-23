@@ -1,5 +1,23 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Tab } from '@headlessui/react'
+
+import planning from '../../assets/planning.png'
+import search from '../../assets/search.png'
+import analytics from '../../assets/analytics.png'
+import files from '../../assets/files.png'
+import settings from '../../assets/settings.png'
+
+import { ChartPieIcon } from '@heroicons/react/24/solid'
+import { InboxIcon } from '@heroicons/react/24/solid'
+import { UserCircleIcon } from '@heroicons/react/24/solid'
+import { ClipboardDocumentListIcon } from '@heroicons/react/24/solid'
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -62,22 +80,142 @@ export const BottomNavigation = () => {
       <div className='w-full'>
         <Tab.Group>
           <Tab.List className="flex space-x-1 bg-zinc-800 p-5">
-            {Object.keys(categories).map((category) => (
-              <Tab
-                key={category}
-                className={({ selected }) =>
-                  classNames(
-                    'w-full text-sm font-medium leading-5 text-white',
-                    'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
-                    selected
-                      ? 'bg-white shadow text-black rounded-md p-2'
-                      : 'text-blue-100 hover:bg-white/[0.12] rounded-md hover:text-white'
-                  )
-                }
-              >
-                {category}
-              </Tab>
-            ))}
+            <Swiper
+              spaceBetween={34}
+              slidesPerView={3}
+              height={400}
+              width={400}
+              allowSlideNext={true}
+              allowSlidePrev={true}
+              slidesPerGroup={5}
+              navigation={false}
+              breakpoints={{
+                300: {
+                  width: 300,
+                  slidesPerView: 4,
+                  slidesPerGroup: 3
+                },
+                640: {
+                  width: 450,
+                  slidesPerView: 4,
+                  slidesPerGroup: 3
+                },
+                768: {
+                  width: 400,
+                  slidesPerView: 4,
+                  slidesPerGroup: 3
+                },
+              }}
+            >
+              <SwiperSlide>
+                <Tab
+                  className={({ selected }) =>
+                    classNames(
+                      'w-full text-sm font-medium leading-5 text-white',
+                      'outline-none',
+                      selected
+                        ? 'bg-zinc-400 shadow text-black rounded-md p-2'
+                        : 'text-blue-100 hover:bg-white/[0.12] rounded-md hover:text-white'
+                    )
+                  }
+                >
+                  <div className='flex flex-col justify-center items-center'>
+                    <ChartPieIcon className='h-12' />
+                    <span>Dashboard</span>
+                  </div>
+                </Tab>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Tab
+                  className={({ selected }) =>
+                    classNames(
+                      'w-full text-sm font-medium leading-5 text-white',
+                      'outline-none',
+                      selected
+                        ? 'bg-zinc-400 shadow text-black rounded-md p-2'
+                        : 'text-blue-100 hover:bg-white/[0.12] rounded-md hover:text-white'
+                    )
+                  }
+                >
+                  <div className='flex flex-col justify-center items-center'>
+                    <InboxIcon className='h-12' />
+                    <span>Inbox</span>
+                  </div>
+                </Tab>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Tab
+                  className={({ selected }) =>
+                    classNames(
+                      'w-full text-sm font-medium leading-5 text-white',
+                      'outline-none',
+                      selected
+                        ? 'bg-zinc-400 shadow text-black rounded-md p-2'
+                        : 'text-blue-100 hover:bg-white/[0.12] rounded-md hover:text-white'
+                    )
+                  }
+                >
+                  <div className='flex flex-col justify-center items-center'>
+                    <UserCircleIcon className='h-12' />
+                    <span>Accounts</span>
+                  </div>
+                </Tab>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Tab
+                  className={({ selected }) =>
+                    classNames(
+                      'w-full text-sm font-medium leading-5 text-white',
+                      'outline-none',
+                      selected
+                        ? 'bg-zinc-400 shadow text-black rounded-md p-2'
+                        : 'text-blue-100 hover:bg-white/[0.12] rounded-md hover:text-white'
+                    )
+                  }
+                >
+                  <div className='flex flex-col justify-center items-center'>
+                    <ClipboardDocumentListIcon className='h-12' />
+                    <span>Schedule</span>
+                  </div>
+                </Tab>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Tab
+                  className={({ selected }) =>
+                    classNames(
+                      'w-full text-sm font-medium leading-5 text-white',
+                      'outline-none',
+                      selected
+                        ? 'bg-zinc-400 shadow text-black rounded-md p-2'
+                        : 'text-blue-100 hover:bg-white/[0.12] rounded-md hover:text-white'
+                    )
+                  }
+                >
+                  <div className='flex flex-col justify-center items-center'>
+                    <ClipboardDocumentListIcon className='h-12' />
+                    <span>Schedule</span>
+                  </div>
+                </Tab>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Tab
+                  className={({ selected }) =>
+                    classNames(
+                      'w-full text-sm font-medium leading-5 text-white',
+                      'outline-none',
+                      selected
+                        ? 'bg-zinc-400 shadow text-black rounded-md p-2'
+                        : 'text-blue-100 hover:bg-white/[0.12] rounded-md hover:text-white'
+                    )
+                  }
+                >
+                  <div className='flex flex-col justify-center items-center'>
+                    <ClipboardDocumentListIcon className='h-12' />
+                    <span>Schedule</span>
+                  </div>
+                </Tab>
+              </SwiperSlide>
+            </Swiper>
           </Tab.List>
           <Tab.Panels className="mt-2">
             {Object.values(categories).map((posts, idx) => (
@@ -121,6 +259,7 @@ export const BottomNavigation = () => {
           </Tab.Panels>
         </Tab.Group>
       </div>
-    </div>
+
+    </div >
   )
 }

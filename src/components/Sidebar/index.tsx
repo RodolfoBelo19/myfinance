@@ -11,7 +11,7 @@ import analytics from '../../assets/analytics.png'
 import files from '../../assets/files.png'
 import settings from '../../assets/settings.png'
 
-export const Header = () => {
+export const Sidebar = () => {
   const [open, setOpen] = useState(true);
   const Menus = [
     { title: "Dashboard", src: dashboard },
@@ -25,7 +25,7 @@ export const Header = () => {
   ]
 
   return <div className="flex">
-    <div className={`${open ? 'w-72' : 'w-24'} duration-300 h-screen p-5 pt-8 bg-dark-purple relative`}>
+    <div className={`${open ? 'w-72' : 'w-24'} duration-300 h-screen p-5 pt-8 bg-zinc-800 relative`}>
       <img src={arrow_left} className={`absolute cursor-pointer -right-3 top-9 w-7 border-2 border-dark-purple rounded-full ${!open && 'rotate-180'}`}
         onClick={() => setOpen(!open)} />
       <div className="flex gap-x-4 items-center">
@@ -36,16 +36,18 @@ export const Header = () => {
         </h1>
       </div>
       <ul className="pt-6">
-        {Menus.map((menu, index) => 
-          <li key={index} className={`flex items-center text-gray-300 text-sm mb-3 cursor-pointer hover:bg-light-white rounded-full ${menu.gap ? "mt-9" : "mt-2"} ${index === 0 && 'bg-light-white'}`}>
-            <img className="rounded-full h-12" width={50} src={menu.src } />
-            <span className={`ml-2 origin-left duration-300 ${!open && 'hidden'}`}>{menu.title}</span>
+        {Menus.map((menu, index) =>
+          <li key={index} className={`${open && 'hover:bg-zinc-500'} flex items-center text-gray-300 duration-300 text-sm mb-3 cursor-pointer hover:bg-light-white rounded-full ${menu.gap ? "mt-9" : "mt-2"} ${index === 0 && 'bg-light-white'}`}>
+            <img className="rounded-full h-12" width={50} src={menu.src} />
+            <span className={
+              `ml-2 origin-left duration-300 text-white ${!open && 'hidden'}`
+            }>{menu.title}</span>
           </li>
         )}
       </ul>
 
     </div>
-    <div className="p-7 text-2x1 font-semibold flex-1 h-screen">
+    <div className="p-7 bg-zinc-50 text-2x1 font-semibold flex-1 h-screen">
       <h1>Home Page</h1>
     </div>
   </div>

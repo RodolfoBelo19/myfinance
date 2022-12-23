@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { BottomNavigation } from "./components/BottomNavigation"
-import { Header } from "./components/Header"
+import { Sidebar } from "./components/Sidebar"
 
 function App() {
 
   return (
     <>
       <div className="hidden sm:block">
-        <Header />
+        <Sidebar />
       </div>
       <div className="flex sm:hidden">
         <BottomNavigation />
