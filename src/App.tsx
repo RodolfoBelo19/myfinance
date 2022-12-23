@@ -10,7 +10,7 @@ function App() {
       <div className="hidden sm:block">
         <Header />
       </div>
-      <div className="block sm:hidden">
+      <div className="flex sm:hidden">
         <BottomNavigation />
       </div>
     </>
